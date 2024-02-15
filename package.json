@@ -1,0 +1,23 @@
+{
+  "name": "twitch-api-wrapper-ts",
+  "version": "0.0.1",
+  "description": "Twitch Api Wrapper for Typescript",
+  "author": "Thomas Kelly Gipson",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && jasmine",
+    "remove-specs": "cd ./dist && del *.spec.js /a /s",
+    "package": "npm run build && npm run test && npm run remove-specs"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^5.1.4",
+    "jasmine": "^5.1.0",
+    "typescript": "^5.3.3"
+  }
+}
